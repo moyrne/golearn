@@ -62,6 +62,7 @@ func getStruct(filename, structName string) (*StructResult, error) {
 		return nil, errors.WithStack(err)
 	}
 
+	// TODO 如何获取注释
 	var result StructResult
 	ast.Inspect(f, func(n ast.Node) bool {
 		switch node := n.(type) {
